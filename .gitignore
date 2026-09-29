@@ -1,0 +1,18 @@
+node_modules/
+.next/
+out/
+build/
+coverage/
+*.tsbuildinfo
+next-env.d.ts
+
+# Environment files hold API keys — never commit them.
+.env
+.env.local
+.env.*.local
+
+.claude/
+
+npm-debug.log*
+.DS_Store
+Thumbs.db

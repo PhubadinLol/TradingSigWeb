@@ -1,0 +1,30 @@
+{
+  "name": "trading-signal-dashboard",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Educational trading-signal dashboard: explainable technical-analysis signals, backtesting and risk tools.",
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "typecheck": "tsc --noEmit"
+  },
+  "engines": {
+    "node": ">=18.18"
+  },
+  "dependencies": {
+    "lightweight-charts": "^5.2.1",
+    "next": "^15.5.26",
+    "react": "^19.3.0",
+    "react-dom": "^19.3.0",
+    "zod": "^3.25.76"
+  },
+  "devDependencies": {
+    "@tailwindcss/postcss": "^4.3.3",
+    "@types/node": "^22.20.4",
+    "@types/react": "^19.3.0",
+    "@types/react-dom": "^19.3.0",
+    "tailwindcss": "^4.3.3",
+    "typescript": "^5.9.3"
+  }
+}

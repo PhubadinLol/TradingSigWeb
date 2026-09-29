@@ -1,0 +1,97 @@
+@import "tailwindcss";
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+/* Design tokens. Light values on :root, dark values on .dark (the default). */
+:root {
+  --bg: #f5f6f8;
+  --panel: #ffffff;
+  --panel-2: #f0f2f5;
+  --border: #e2e5ea;
+  --fg: #0f172a;
+  --muted: #5f6b80;
+  --accent: #2563eb;
+  --up: #0a8f5f;
+  --down: #d12b3a;
+  --warn: #b45309;
+  --up-soft: rgba(10, 143, 95, 0.1);
+  --down-soft: rgba(209, 43, 58, 0.1);
+  --warn-soft: rgba(180, 83, 9, 0.1);
+  --accent-soft: rgba(37, 99, 235, 0.1);
+  --chart-grid: #eceff3;
+  --ema-fast: #d97706;
+  --ema-mid: #2563eb;
+  --ema-slow: #7c3aed;
+  color-scheme: light;
+}
+
+.dark {
+  --bg: #0a0d13;
+  --panel: #11151d;
+  --panel-2: #171c26;
+  --border: #222938;
+  --fg: #e5e9f0;
+  --muted: #8b95a8;
+  --accent: #4f8cff;
+  --up: #1fbf84;
+  --down: #f0525f;
+  --warn: #f5a524;
+  --up-soft: rgba(31, 191, 132, 0.12);
+  --down-soft: rgba(240, 82, 95, 0.12);
+  --warn-soft: rgba(245, 165, 36, 0.12);
+  --accent-soft: rgba(79, 140, 255, 0.12);
+  --chart-grid: #1a2030;
+  --ema-fast: #f5a524;
+  --ema-mid: #4f8cff;
+  --ema-slow: #b18cff;
+  color-scheme: dark;
+}
+
+@theme inline {
+  --color-bg: var(--bg);
+  --color-panel: var(--panel);
+  --color-panel-2: var(--panel-2);
+  --color-border: var(--border);
+  --color-fg: var(--fg);
+  --color-muted: var(--muted);
+  --color-accent: var(--accent);
+  --color-up: var(--up);
+  --color-down: var(--down);
+  --color-warn: var(--warn);
+  --color-up-soft: var(--up-soft);
+  --color-down-soft: var(--down-soft);
+  --color-warn-soft: var(--warn-soft);
+  --color-accent-soft: var(--accent-soft);
+  --font-sans: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
+  --font-mono: var(--font-mono-jb), ui-monospace, SFMono-Regular, Menlo, monospace;
+}
+
+html,
+body {
+  background: var(--bg);
+  color: var(--fg);
+}
+
+body {
+  font-feature-settings: "cv11", "ss01";
+  -webkit-font-smoothing: antialiased;
+}
+
+.num {
+  font-family: var(--font-mono);
+  font-variant-numeric: tabular-nums;
+}
+
+:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+  }
+}
